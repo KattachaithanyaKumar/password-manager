@@ -57,7 +57,7 @@ const Home = () => {
 
           {isModalOpen && 
             <div className='modal'>
-              <h2>Add Password</h2>
+              <h2>Add Password here</h2>
               <form>
                 <input type="text" placeholder='Title' />
                 <input type="text" placeholder='Name' />
