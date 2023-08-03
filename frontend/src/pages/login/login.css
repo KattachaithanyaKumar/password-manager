@@ -1,0 +1,53 @@
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: var(--blue);
+  padding: 2%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-container > h1 {
+  color: white;
+}
+
+.login-container > img {
+  margin: 5%;
+  animation: float 3s ease infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.login-container > button {
+  background-color: var(--highlight);
+  border: none;
+  outline: none;
+  padding: 5% 10%;
+  border-radius: 12px;
+  color: white;
+  margin-top: 10%;
+  font-size: 24px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-container > button:hover {
+  background-color: var(--hover);
+}
