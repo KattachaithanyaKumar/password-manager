@@ -1,0 +1,38 @@
+.nav {
+  box-shadow: var(--shadow) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav > h1 {
+  color: white;
+  margin-left: 30px;
+}
+
+.nav-credit {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.nav-credit > p {
+  color: white;
+  margin: 10px;
+}
+
+.nav-credit > p > a {
+  color: var(--highlight);
+}
+
+.nav-credit > button {
+  width: 100px;
+  height: 30px;
+  border-radius: 14px;
+  background-color: var(--blue);
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}

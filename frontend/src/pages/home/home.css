@@ -1,0 +1,63 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.home-left {
+  box-shadow: var(--shadow) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.profile {
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  margin: 4%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow) 0px 7px 20px 0px;
+}
+
+.profile > img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 12px;
+  aspect-ratio: 1;
+}
+
+.profile > h2 {
+  color: white;
+  margin: 6%;
+}
+
+.add-pass {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow) 0px 5px 15px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.add-pass > h1 {
+  color: var(--highlight);
+}
+
+.add-pass:hover {
+  background-color: var(--blue);
+}
+
+.add-pass:hover > h1 {
+  color: white;
+}

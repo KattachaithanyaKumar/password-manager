@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .login-container {
@@ -30,7 +31,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-16px);
   }
 }
 
@@ -50,4 +51,9 @@
 
 .login-container > button:hover {
   background-color: var(--hover);
+}
+
+.credit {
+  color: white;
+  margin: 10px;
 }
