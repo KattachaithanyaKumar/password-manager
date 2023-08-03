@@ -8,13 +8,13 @@
 
 .nav > h1 {
   color: white;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 .nav-credit {
   display: flex;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .nav-credit > p {

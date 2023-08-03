@@ -10,6 +10,7 @@ const Navbar = () => {
   async function handleLogout()  {
     try {
       await signOut(auth);
+      localStorage.removeItem("currentUser")
       console.log('logged out');
       navigate("/")
     }catch(err) {
