@@ -3,6 +3,7 @@ import { auth, provider } from '../../../firebase'
 import { signInWithPopup, signOut, signInWithRedirect } from 'firebase/auth'
 import "./login.css"
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-hot-toast'
 import client from '../../client'
 
 import login_img from "../../assets/login-image.png"
@@ -20,13 +21,13 @@ const Login = () => {
 
     try {
       const data = await client.fetch(`*[_type == 'user']`);
-      console.log("check: ", data);
+      // console.log("check: ", data);
       let mappedData = Object.entries(data).map(([key, value]) => {
           return {id: key, ...value};
       })
 
       const found = mappedData.find(user => user.email === userData?.email) !== undefined;
-      console.log("found: ", found);
+      // console.log("found: ", found);
 
       // console.log("mapped: ", mappedData);
 
@@ -35,8 +36,8 @@ const Login = () => {
           _type: "user",
           name: userData.displayName,
           email: userData.email,
-          password: [],
         })
+        console.log("created: ", newUser);
       }
 
     }catch(err) {
@@ -50,8 +51,11 @@ const Login = () => {
       //check if user already exists
       checkUser(JSON.stringify(res.user));
       
+      localStorage.setItem("loggedIn", true);
       localStorage.setItem("currentUser", JSON.stringify(res.user));
       localStorage.setItem("profile", JSON.stringify(res.user.photoURL));
+
+      toast.success("Login successful")
 
       navigate("/home")
     } catch (err) {

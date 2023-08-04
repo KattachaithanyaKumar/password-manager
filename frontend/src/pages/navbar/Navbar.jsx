@@ -3,6 +3,7 @@ import { signOut } from 'firebase/auth'
 import { auth } from '../../../firebase'
 import "./nav.css"
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-hot-toast'
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -11,7 +12,12 @@ const Navbar = () => {
     try {
       await signOut(auth);
       localStorage.removeItem("currentUser")
+      localStorage.removeItem("profile")
+      localStorage.setItem("loggedIn", false)
       console.log('logged out');
+
+      toast.success("Logged out")
+
       navigate("/")
     }catch(err) {
       console.error(err)

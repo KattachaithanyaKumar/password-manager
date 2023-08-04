@@ -105,13 +105,13 @@
   text-align: center;
 }
 
-.modal > form {
+.form {
   width: 90%;
   display: flex;
   flex-direction: column;
 }
 
-.modal > form > input {
+.form > input {
   margin: 10px;
   padding: 12px;
   border: none;
@@ -119,7 +119,7 @@
   border-radius: 12px;
 }
 
-.modal > form > input:focus {
+.form > input:focus {
   box-shadow: 0px 0px 8px var(--grey);
 } 
 
@@ -150,4 +150,26 @@
 
 .inputs > button:hover {
   background-color: white;
+}
+
+.home-right {
+  display: flex;
+  gap: 10px;
+}
+
+.passwords-container {
+  background-color: var(--blue);
+  height: 100px;
+  flex-basis: 200px;
+  flex-wrap: wrap;
+  margin: 20px;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: var(--grey) 0px 7px 20px 0px;
+}
+
+
+.password {
+  text-decoration: line-through;
 }
